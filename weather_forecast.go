@@ -1,14 +1,12 @@
-//write a comment for `package weather` that describes its contents.
-// The package comment should introduce the package and provide information relevant to the package as a whole.
+//Package weather provides the user with the local weather conditions.
 package weather
-//clarify the usage of the package variables `CurrentCondition` and `CurrentLocation`
-//tell any user of the package what information the variables store, and what they can do with it.
 
-//
+//CurrentCondition represnts a certain weather condition. 
 var CurrentCondition string
+//CurrentLocation represents a certain location on planet earth.
 var CurrentLocation string
-//write a comment for this function that describes what the function does, but not how it does it.
-//
+
+//Forecast returns a string description of the current local weather conditions.
 func Forecast(city, condition string) string {
 	CurrentLocation, CurrentCondition = city, condition
 	return CurrentLocation + " - current weather condition: " + CurrentCondition
